@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C5B07A8A18EDC89500E04490 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B07A8918EDC89500E04490 /* Foundation.framework */; };
+		C5B07A8E18EDC89500E04490 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B07A8D18EDC89500E04490 /* UIKit.framework */; };
+		C5B07A9418EDC89500E04490 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5B07A9218EDC89500E04490 /* InfoPlist.strings */; };
+		C5B07A9618EDC89500E04490 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B07A9518EDC89500E04490 /* main.m */; };
+		C5B07A9A18EDC89500E04490 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B07A9918EDC89500E04490 /* AppDelegate.m */; };
+		C5B07A9D18EDC89500E04490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B07A9B18EDC89500E04490 /* Main.storyboard */; };
+		C5B07AA018EDC89500E04490 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B07A9F18EDC89500E04490 /* ViewController.m */; };
+		C5B07AA218EDC89500E04490 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5B07AA118EDC89500E04490 /* Images.xcassets */; };
+		C5B07AA918EDC89500E04490 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B07AA818EDC89500E04490 /* XCTest.framework */; };
+		C5B07AAA18EDC89500E04490 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B07A8918EDC89500E04490 /* Foundation.framework */; };
+		C5B07AAB18EDC89500E04490 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B07A8D18EDC89500E04490 /* UIKit.framework */; };
+		C5B07AB318EDC89500E04490 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5B07AB118EDC89500E04490 /* InfoPlist.strings */; };
+		C5B07AB518EDC89500E04490 /* FastVolumeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B07AB418EDC89500E04490 /* FastVolumeTests.m */; };
+		C5B07ABF18EDCC7B00E04490 /* Celestial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B07ABE18EDCC7B00E04490 /* Celestial.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5B07AAC18EDC89500E04490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5B07A7E18EDC89500E04490 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5B07A8518EDC89500E04490;
+			remoteInfo = FastVolume;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C5B07A8618EDC89500E04490 /* FastVolume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastVolume.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5B07A8918EDC89500E04490 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C5B07A8B18EDC89500E04490 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C5B07A8D18EDC89500E04490 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C5B07A9118EDC89500E04490 /* FastVolume-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FastVolume-Info.plist"; sourceTree = "<group>"; };
+		C5B07A9318EDC89500E04490 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C5B07A9518EDC89500E04490 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C5B07A9718EDC89500E04490 /* FastVolume-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FastVolume-Prefix.pch"; sourceTree = "<group>"; };
+		C5B07A9818EDC89500E04490 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C5B07A9918EDC89500E04490 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C5B07A9C18EDC89500E04490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C5B07A9E18EDC89500E04490 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C5B07A9F18EDC89500E04490 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C5B07AA118EDC89500E04490 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C5B07AA718EDC89500E04490 /* FastVolumeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastVolumeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5B07AA818EDC89500E04490 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C5B07AB018EDC89500E04490 /* FastVolumeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FastVolumeTests-Info.plist"; sourceTree = "<group>"; };
+		C5B07AB218EDC89500E04490 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C5B07AB418EDC89500E04490 /* FastVolumeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastVolumeTests.m; sourceTree = "<group>"; };
+		C5B07ABE18EDCC7B00E04490 /* Celestial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Celestial.framework; path = System/Library/PrivateFrameworks/Celestial.framework; sourceTree = SDKROOT; };
+		C5B07AC018EDCD7200E04490 /* AVSystemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSystemController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5B07A8318EDC89500E04490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5B07ABF18EDCC7B00E04490 /* Celestial.framework in Frameworks */,
+				C5B07A8E18EDC89500E04490 /* UIKit.framework in Frameworks */,
+				C5B07A8A18EDC89500E04490 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5B07AA418EDC89500E04490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5B07AA918EDC89500E04490 /* XCTest.framework in Frameworks */,
+				C5B07AAB18EDC89500E04490 /* UIKit.framework in Frameworks */,
+				C5B07AAA18EDC89500E04490 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C5B07A7D18EDC89500E04490 = {
+			isa = PBXGroup;
+			children = (
+				C5B07A8F18EDC89500E04490 /* FastVolume */,
+				C5B07AAE18EDC89500E04490 /* FastVolumeTests */,
+				C5B07A8818EDC89500E04490 /* Frameworks */,
+				C5B07A8718EDC89500E04490 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C5B07A8718EDC89500E04490 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5B07A8618EDC89500E04490 /* FastVolume.app */,
+				C5B07AA718EDC89500E04490 /* FastVolumeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5B07A8818EDC89500E04490 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5B07ABE18EDCC7B00E04490 /* Celestial.framework */,
+				C5B07A8918EDC89500E04490 /* Foundation.framework */,
+				C5B07A8B18EDC89500E04490 /* CoreGraphics.framework */,
+				C5B07A8D18EDC89500E04490 /* UIKit.framework */,
+				C5B07AA818EDC89500E04490 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5B07A8F18EDC89500E04490 /* FastVolume */ = {
+			isa = PBXGroup;
+			children = (
+				C5B07AC318EDE67500E04490 /* PrivateAPI */,
+				C5B07A9818EDC89500E04490 /* AppDelegate.h */,
+				C5B07A9918EDC89500E04490 /* AppDelegate.m */,
+				C5B07A9B18EDC89500E04490 /* Main.storyboard */,
+				C5B07A9E18EDC89500E04490 /* ViewController.h */,
+				C5B07A9F18EDC89500E04490 /* ViewController.m */,
+				C5B07AA118EDC89500E04490 /* Images.xcassets */,
+				C5B07A9018EDC89500E04490 /* Supporting Files */,
+			);
+			path = FastVolume;
+			sourceTree = "<group>";
+		};
+		C5B07A9018EDC89500E04490 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5B07A9118EDC89500E04490 /* FastVolume-Info.plist */,
+				C5B07A9218EDC89500E04490 /* InfoPlist.strings */,
+				C5B07A9518EDC89500E04490 /* main.m */,
+				C5B07A9718EDC89500E04490 /* FastVolume-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5B07AAE18EDC89500E04490 /* FastVolumeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C5B07AB418EDC89500E04490 /* FastVolumeTests.m */,
+				C5B07AAF18EDC89500E04490 /* Supporting Files */,
+			);
+			path = FastVolumeTests;
+			sourceTree = "<group>";
+		};
+		C5B07AAF18EDC89500E04490 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5B07AB018EDC89500E04490 /* FastVolumeTests-Info.plist */,
+				C5B07AB118EDC89500E04490 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5B07AC318EDE67500E04490 /* PrivateAPI */ = {
+			isa = PBXGroup;
+			children = (
+				C5B07AC018EDCD7200E04490 /* AVSystemController.h */,
+			);
+			name = PrivateAPI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5B07A8518EDC89500E04490 /* FastVolume */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5B07AB818EDC89500E04490 /* Build configuration list for PBXNativeTarget "FastVolume" */;
+			buildPhases = (
+				C5B07A8218EDC89500E04490 /* Sources */,
+				C5B07A8318EDC89500E04490 /* Frameworks */,
+				C5B07A8418EDC89500E04490 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FastVolume;
+			productName = FastVolume;
+			productReference = C5B07A8618EDC89500E04490 /* FastVolume.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C5B07AA618EDC89500E04490 /* FastVolumeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5B07ABB18EDC89500E04490 /* Build configuration list for PBXNativeTarget "FastVolumeTests" */;
+			buildPhases = (
+				C5B07AA318EDC89500E04490 /* Sources */,
+				C5B07AA418EDC89500E04490 /* Frameworks */,
+				C5B07AA518EDC89500E04490 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5B07AAD18EDC89500E04490 /* PBXTargetDependency */,
+			);
+			name = FastVolumeTests;
+			productName = FastVolumeTests;
+			productReference = C5B07AA718EDC89500E04490 /* FastVolumeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5B07A7E18EDC89500E04490 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Andrey Fedorov";
+				TargetAttributes = {
+					C5B07AA618EDC89500E04490 = {
+						TestTargetID = C5B07A8518EDC89500E04490;
+					};
+				};
+			};
+			buildConfigurationList = C5B07A8118EDC89500E04490 /* Build configuration list for PBXProject "FastVolume" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C5B07A7D18EDC89500E04490;
+			productRefGroup = C5B07A8718EDC89500E04490 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5B07A8518EDC89500E04490 /* FastVolume */,
+				C5B07AA618EDC89500E04490 /* FastVolumeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5B07A8418EDC89500E04490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5B07AA218EDC89500E04490 /* Images.xcassets in Resources */,
+				C5B07A9418EDC89500E04490 /* InfoPlist.strings in Resources */,
+				C5B07A9D18EDC89500E04490 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5B07AA518EDC89500E04490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5B07AB318EDC89500E04490 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5B07A8218EDC89500E04490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5B07AA018EDC89500E04490 /* ViewController.m in Sources */,
+				C5B07A9A18EDC89500E04490 /* AppDelegate.m in Sources */,
+				C5B07A9618EDC89500E04490 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5B07AA318EDC89500E04490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5B07AB518EDC89500E04490 /* FastVolumeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5B07AAD18EDC89500E04490 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5B07A8518EDC89500E04490 /* FastVolume */;
+			targetProxy = C5B07AAC18EDC89500E04490 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C5B07A9218EDC89500E04490 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5B07A9318EDC89500E04490 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C5B07A9B18EDC89500E04490 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5B07A9C18EDC89500E04490 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C5B07AB118EDC89500E04490 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5B07AB218EDC89500E04490 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5B07AB618EDC89500E04490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C5B07AB718EDC89500E04490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5B07AB918EDC89500E04490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FastVolume/FastVolume-Prefix.pch";
+				INFOPLIST_FILE = "FastVolume/FastVolume-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C5B07ABA18EDC89500E04490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FastVolume/FastVolume-Prefix.pch";
+				INFOPLIST_FILE = "FastVolume/FastVolume-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C5B07ABC18EDC89500E04490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FastVolume.app/FastVolume";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FastVolume/FastVolume-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FastVolumeTests/FastVolumeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C5B07ABD18EDC89500E04490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FastVolume.app/FastVolume";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FastVolume/FastVolume-Prefix.pch";
+				INFOPLIST_FILE = "FastVolumeTests/FastVolumeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5B07A8118EDC89500E04490 /* Build configuration list for PBXProject "FastVolume" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5B07AB618EDC89500E04490 /* Debug */,
+				C5B07AB718EDC89500E04490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5B07AB818EDC89500E04490 /* Build configuration list for PBXNativeTarget "FastVolume" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5B07AB918EDC89500E04490 /* Debug */,
+				C5B07ABA18EDC89500E04490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5B07ABB18EDC89500E04490 /* Build configuration list for PBXNativeTarget "FastVolumeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5B07ABC18EDC89500E04490 /* Debug */,
+				C5B07ABD18EDC89500E04490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5B07A7E18EDC89500E04490 /* Project object */;
+}
