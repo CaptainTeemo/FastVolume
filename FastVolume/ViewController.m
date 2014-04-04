@@ -26,6 +26,7 @@ static const float HI_VOLUME = ONE_BAR * 10;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.volumeState.transform = CGAffineTransformMakeScale(3, 3);
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                           action:@selector(suspend)];
