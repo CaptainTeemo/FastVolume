@@ -16,7 +16,7 @@
                                 <rect key="frame" x="136" y="390" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="toggleVolume:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Xmq-V8-ohH"/>
+                                    <action selector="toggleVolume" destination="vXZ-lx-hvc" eventType="valueChanged" id="Xmq-V8-ohH"/>
                                 </connections>
                             </switch>
                         </subviews>

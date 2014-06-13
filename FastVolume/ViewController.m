@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AVSystemController.h"
+#import <notify.h>
 
 
 static const float ONE_BAR   = 0.0625; // 16 bars total
@@ -21,6 +22,9 @@ static const float HI_VOLUME = ONE_BAR * 10;
 
 
 @implementation ViewController
+{
+    int notifyToken;
+}
 
 
 - (void)viewDidLoad
@@ -36,12 +40,26 @@ static const float HI_VOLUME = ONE_BAR * 10;
                                              selector:@selector(applicationWillEnterForeground)
                                                  name:UIApplicationWillEnterForegroundNotification
                                                object:nil];
+
+    notify_register_dispatch("com.apple.springboard.lockcomplete",
+        &notifyToken,
+        dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+        ^(int info) {
+            uint64_t locked;
+            notify_get_state(notifyToken, &locked);
+            if (locked) {
+                [self.volumeState setOn:![self.volumeState isOn]];
+                [self toggleVolume];
+            }
+        });
+
     [self syncVolume];
 }
 
 
 - (void)dealloc
 {
+    notify_cancel(notifyToken);
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -99,9 +117,9 @@ static const float HI_VOLUME = ONE_BAR * 10;
 }
 
 
-- (IBAction)toggleVolume:(UISwitch *)sender
+- (IBAction)toggleVolume
 {
-    if (sender.isOn) {
+    if (self.volumeState.isOn) {
         [self hiVolume];
     } else {
         [self loVolume];

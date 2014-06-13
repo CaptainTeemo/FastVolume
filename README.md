@@ -6,4 +6,15 @@ Application provides fast way (on non-jailbroken device) to switch between quiet
 
 Volume automatically adjusted (if necessary) to nearest value on every launch and resume from background.
 
-Application has immediately suspended after volume switch or tap anywhere in view. It's the reason for *Fast*, as few user actions as possible.
+Application has immediately suspended after volume switch or tap anywhere in view. Volume also will be toggled if you lock device while application is active. That's why it's *Fast* - require as few user actions as possible.
+
+
+### Changes
+
+<dl>
+    <dt>v1.0.4</dt>
+    <dd>Automatically toggle volume if you lock device while application is active.</dd>
+
+    <dt>v1.0.3</dt>
+    <dd>Switch is x3 larger.</dd>
+</dl>
