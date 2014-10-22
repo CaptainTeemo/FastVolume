@@ -12,7 +12,7 @@
 
 
 static const float ONE_BAR   = 0.0625; // 16 bars total
-static const float LO_VOLUME = ONE_BAR * 4;
+static const float LO_VOLUME = ONE_BAR * 5;
 static const float HI_VOLUME = ONE_BAR * 10;
 
 
