@@ -24,6 +24,7 @@ static const float HI_VOLUME = ONE_BAR * 10;
 @implementation ViewController
 {
     int notifyToken;
+    BOOL canShowHelp;
 }
 
 
@@ -41,6 +42,16 @@ static const float HI_VOLUME = ONE_BAR * 10;
                                                  name:UIApplicationWillEnterForegroundNotification
                                                object:nil];
 
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationWillResignActive)
+                                                 name:UIApplicationWillResignActiveNotification
+                                               object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationDidBecomeActive)
+                                                 name:UIApplicationDidBecomeActiveNotification
+                                               object:nil];
+
     notify_register_dispatch("com.apple.springboard.lockcomplete",
         &notifyToken,
         dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
@@ -54,6 +65,8 @@ static const float HI_VOLUME = ONE_BAR * 10;
         });
 
     [self syncVolume];
+    canShowHelp = YES;
+    [self showHelp];
 }
 
 
@@ -66,7 +79,86 @@ static const float HI_VOLUME = ONE_BAR * 10;
 
 - (void)suspend
 {
+    [self hideHelp];
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "UnresolvedMessage"
     [[UIApplication sharedApplication] performSelector:@selector(suspend)];
+#pragma clang diagnostic pop
+}
+
+
+- (NSArray *)helpViews
+{
+    NSMutableArray *views = [[NSMutableArray alloc] init];
+    for (id elem in self.view.subviews) {
+        if ([elem isKindOfClass:[UILabel class]] || [elem isKindOfClass:[UIImageView class]]) {
+            UIView *v = elem;
+            [views addObject:v];
+        }
+    }
+    return views;
+}
+
+
+- (void)showHelp
+{
+    static BOOL rotated = NO;
+    static BOOL inProgress = NO;
+    if (inProgress) return;
+    if (!canShowHelp) return;
+    inProgress = YES;
+
+    dispatch_time_t x = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 4);
+    dispatch_after(x, dispatch_get_main_queue(), ^{
+        if (!canShowHelp) {
+            inProgress = NO;
+            return;
+        }
+        if (!rotated) {
+            rotated = YES;
+            double angle[4] = {
+                M_PI_4 * 2.5,
+                M_PI_4 * 3.5,
+                M_PI_4 * 4.5,
+                M_PI_4 * 7,
+            };
+            for (int i = 1; i <= 4; i++) {
+                UIImageView *arrowImageView = (UIImageView *)[self.view viewWithTag:i + 100];
+                arrowImageView.transform = CGAffineTransformMakeRotation((CGFloat)angle[i - 1]);
+            }
+        }
+
+        CATransition *transition = [CATransition animation];
+        transition.type = kCATransitionFade;
+        transition.duration = 1.2;
+        transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+        for (UIView *v in [self helpViews]) {
+            v.hidden = NO;
+        }
+        [self.view.layer addAnimation:transition forKey:nil];
+        inProgress = NO;
+    });
+}
+
+
+- (void)hideHelp
+{
+    for (UIView *v in [self helpViews]) {
+        v.hidden = YES;
+    }
+}
+
+
+- (void)applicationWillResignActive
+{
+    canShowHelp = NO;
+    [self hideHelp];
+}
+
+- (void)applicationDidBecomeActive
+{
+    canShowHelp = YES;
+    [self showHelp];
 }
 
 

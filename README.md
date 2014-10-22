@@ -8,10 +8,15 @@ Volume automatically adjusted (if necessary) to nearest value on every launch an
 
 Application has immediately suspended after volume switch or tap anywhere in view. Volume also will be toggled if you lock device while application is active. That's why it's *Fast* - require as few user actions as possible.
 
+|![screenshot](screenshot.png)|
+---
 
 ### Changes
 
 <dl>
+    <dt>v1.0.5</dt>
+    <dd>Help. Screenshot.</dd>
+
     <dt>v1.0.4</dt>
     <dd>Automatically toggle volume if you lock device while application is active.</dd>
 
