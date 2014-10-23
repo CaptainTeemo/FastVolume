@@ -2,6 +2,8 @@
    Image: /System/Library/PrivateFrameworks/Celestial.framework/Celestial
  */
 
+@import UIKit;
+
 @interface AVSystemController : NSObject {
     struct AVSystemControllerPrivate { BOOL x1; BOOL x2; float x3; __unsafe_unretained id x4; struct OpaqueFigPlayer {} *x5; } *_priv;
 }

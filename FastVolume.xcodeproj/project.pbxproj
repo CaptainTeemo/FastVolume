@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A728271D0026953DE2067BC /* VolumeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A72857F4567D6108580A435 /* VolumeControl.m */; };
+		1A728F3A95B563378FD78BB5 /* VolumeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A72857F4567D6108580A435 /* VolumeControl.m */; };
+		C513226C19F836D7006395A7 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C513226B19F836D7006395A7 /* TodayViewController.m */; };
+		C513226E19F836D7006395A7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C513226D19F836D7006395A7 /* MainInterface.storyboard */; };
+		C513227119F836D7006395A7 /* FastVolume Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C513226419F836D7006395A7 /* FastVolume Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C513229519F8DD9A006395A7 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C513226519F836D7006395A7 /* NotificationCenter.framework */; };
+		C513229919F909CA006395A7 /* Celestial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C513227819F83E77006395A7 /* Celestial.framework */; };
+		C513229A19F909DE006395A7 /* Celestial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C513227819F83E77006395A7 /* Celestial.framework */; };
 		C5B07A8A18EDC89500E04490 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B07A8918EDC89500E04490 /* Foundation.framework */; };
 		C5B07A8E18EDC89500E04490 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B07A8D18EDC89500E04490 /* UIKit.framework */; };
 		C5B07A9418EDC89500E04490 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5B07A9218EDC89500E04490 /* InfoPlist.strings */; };
@@ -20,10 +28,17 @@
 		C5B07AAB18EDC89500E04490 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B07A8D18EDC89500E04490 /* UIKit.framework */; };
 		C5B07AB318EDC89500E04490 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5B07AB118EDC89500E04490 /* InfoPlist.strings */; };
 		C5B07AB518EDC89500E04490 /* FastVolumeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B07AB418EDC89500E04490 /* FastVolumeTests.m */; };
-		C5B07ABF18EDCC7B00E04490 /* Celestial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B07ABE18EDCC7B00E04490 /* Celestial.framework */; };
+		C5C3E36619FA92780072381E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C3E36519FA92780072381E /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C513226F19F836D7006395A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5B07A7E18EDC89500E04490 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C513226319F836D7006395A7;
+			remoteInfo = "FastVolume Widget";
+		};
 		C5B07AAC18EDC89500E04490 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C5B07A7E18EDC89500E04490 /* Project object */;
@@ -33,7 +48,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C513227519F836D7006395A7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C513227119F836D7006395A7 /* FastVolume Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1A72857F4567D6108580A435 /* VolumeControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumeControl.m; sourceTree = "<group>"; };
+		1A728AE07EA12FB16574FCE1 /* VolumeControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeControl.h; sourceTree = "<group>"; };
+		C513226419F836D7006395A7 /* FastVolume Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FastVolume Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C513226519F836D7006395A7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		C513226919F836D7006395A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C513226A19F836D7006395A7 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		C513226B19F836D7006395A7 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		C513226D19F836D7006395A7 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		C513227819F83E77006395A7 /* Celestial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Celestial.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/PrivateFrameworks/Celestial.framework; sourceTree = DEVELOPER_DIR; };
 		C5B07A8618EDC89500E04490 /* FastVolume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastVolume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B07A8918EDC89500E04490 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C5B07A8B18EDC89500E04490 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,14 +93,24 @@
 		C5B07AB418EDC89500E04490 /* FastVolumeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastVolumeTests.m; sourceTree = "<group>"; };
 		C5B07ABE18EDCC7B00E04490 /* Celestial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Celestial.framework; path = System/Library/PrivateFrameworks/Celestial.framework; sourceTree = SDKROOT; };
 		C5B07AC018EDCD7200E04490 /* AVSystemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSystemController.h; sourceTree = "<group>"; };
+		C5C3E36519FA92780072381E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C513226119F836D7006395A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C513229A19F909DE006395A7 /* Celestial.framework in Frameworks */,
+				C513229519F8DD9A006395A7 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5B07A8318EDC89500E04490 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5B07ABF18EDCC7B00E04490 /* Celestial.framework in Frameworks */,
+				C513229919F909CA006395A7 /* Celestial.framework in Frameworks */,
 				C5B07A8E18EDC89500E04490 /* UIKit.framework in Frameworks */,
 				C5B07A8A18EDC89500E04490 /* Foundation.framework in Frameworks */,
 			);
@@ -81,11 +129,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C513226719F836D7006395A7 /* FastVolume Widget */ = {
+			isa = PBXGroup;
+			children = (
+				C513226A19F836D7006395A7 /* TodayViewController.h */,
+				C513226B19F836D7006395A7 /* TodayViewController.m */,
+				C513226D19F836D7006395A7 /* MainInterface.storyboard */,
+				C5C3E36519FA92780072381E /* Images.xcassets */,
+				C513226819F836D7006395A7 /* Supporting Files */,
+			);
+			path = "FastVolume Widget";
+			sourceTree = "<group>";
+		};
+		C513226819F836D7006395A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C513226919F836D7006395A7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		C5B07A7D18EDC89500E04490 = {
 			isa = PBXGroup;
 			children = (
 				C5B07A8F18EDC89500E04490 /* FastVolume */,
 				C5B07AAE18EDC89500E04490 /* FastVolumeTests */,
+				C513226719F836D7006395A7 /* FastVolume Widget */,
 				C5B07A8818EDC89500E04490 /* Frameworks */,
 				C5B07A8718EDC89500E04490 /* Products */,
 			);
@@ -96,6 +165,7 @@
 			children = (
 				C5B07A8618EDC89500E04490 /* FastVolume.app */,
 				C5B07AA718EDC89500E04490 /* FastVolumeTests.xctest */,
+				C513226419F836D7006395A7 /* FastVolume Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,11 +173,13 @@
 		C5B07A8818EDC89500E04490 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C513227819F83E77006395A7 /* Celestial.framework */,
 				C5B07ABE18EDCC7B00E04490 /* Celestial.framework */,
 				C5B07A8918EDC89500E04490 /* Foundation.framework */,
 				C5B07A8B18EDC89500E04490 /* CoreGraphics.framework */,
 				C5B07A8D18EDC89500E04490 /* UIKit.framework */,
 				C5B07AA818EDC89500E04490 /* XCTest.framework */,
+				C513226519F836D7006395A7 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,6 +195,8 @@
 				C5B07A9F18EDC89500E04490 /* ViewController.m */,
 				C5B07AA118EDC89500E04490 /* Images.xcassets */,
 				C5B07A9018EDC89500E04490 /* Supporting Files */,
+				1A728AE07EA12FB16574FCE1 /* VolumeControl.h */,
+				1A72857F4567D6108580A435 /* VolumeControl.m */,
 			);
 			path = FastVolume;
 			sourceTree = "<group>";
@@ -167,6 +241,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C513226319F836D7006395A7 /* FastVolume Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C513227219F836D7006395A7 /* Build configuration list for PBXNativeTarget "FastVolume Widget" */;
+			buildPhases = (
+				C513226019F836D7006395A7 /* Sources */,
+				C513226119F836D7006395A7 /* Frameworks */,
+				C513226219F836D7006395A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FastVolume Widget";
+			productName = "FastVolume Widget";
+			productReference = C513226419F836D7006395A7 /* FastVolume Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C5B07A8518EDC89500E04490 /* FastVolume */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5B07AB818EDC89500E04490 /* Build configuration list for PBXNativeTarget "FastVolume" */;
@@ -174,10 +265,12 @@
 				C5B07A8218EDC89500E04490 /* Sources */,
 				C5B07A8318EDC89500E04490 /* Frameworks */,
 				C5B07A8418EDC89500E04490 /* Resources */,
+				C513227519F836D7006395A7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C513227019F836D7006395A7 /* PBXTargetDependency */,
 			);
 			name = FastVolume;
 			productName = FastVolume;
@@ -211,6 +304,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Andrey Fedorov";
 				TargetAttributes = {
+					C513226319F836D7006395A7 = {
+						CreatedOnToolsVersion = 6.1;
+					};
 					C5B07AA618EDC89500E04490 = {
 						TestTargetID = C5B07A8518EDC89500E04490;
 					};
@@ -231,11 +327,21 @@
 			targets = (
 				C5B07A8518EDC89500E04490 /* FastVolume */,
 				C5B07AA618EDC89500E04490 /* FastVolumeTests */,
+				C513226319F836D7006395A7 /* FastVolume Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C513226219F836D7006395A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C513226E19F836D7006395A7 /* MainInterface.storyboard in Resources */,
+				C5C3E36619FA92780072381E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5B07A8418EDC89500E04490 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +363,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C513226019F836D7006395A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C513226C19F836D7006395A7 /* TodayViewController.m in Sources */,
+				1A728271D0026953DE2067BC /* VolumeControl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5B07A8218EDC89500E04490 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,6 +379,7 @@
 				C5B07AA018EDC89500E04490 /* ViewController.m in Sources */,
 				C5B07A9A18EDC89500E04490 /* AppDelegate.m in Sources */,
 				C5B07A9618EDC89500E04490 /* main.m in Sources */,
+				1A728F3A95B563378FD78BB5 /* VolumeControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +394,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C513227019F836D7006395A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C513226319F836D7006395A7 /* FastVolume Widget */;
+			targetProxy = C513226F19F836D7006395A7 /* PBXContainerItemProxy */;
+		};
 		C5B07AAD18EDC89500E04490 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C5B07A8518EDC89500E04490 /* FastVolume */;
@@ -313,6 +434,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C513227319F836D7006395A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/PrivateFrameworks",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FastVolume Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C513227419F836D7006395A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/PrivateFrameworks",
+				);
+				INFOPLIST_FILE = "FastVolume Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		C5B07AB618EDC89500E04490 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -391,6 +552,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+					"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/PrivateFrameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FastVolume/FastVolume-Prefix.pch";
@@ -408,6 +570,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+					"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/PrivateFrameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FastVolume/FastVolume-Prefix.pch";
@@ -460,6 +623,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C513227219F836D7006395A7 /* Build configuration list for PBXNativeTarget "FastVolume Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C513227319F836D7006395A7 /* Debug */,
+				C513227419F836D7006395A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C5B07A8118EDC89500E04490 /* Build configuration list for PBXProject "FastVolume" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

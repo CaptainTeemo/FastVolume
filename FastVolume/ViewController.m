@@ -7,13 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "AVSystemController.h"
+#import "VolumeControl.h"
 #import <notify.h>
-
-
-static const float ONE_BAR   = 0.0625; // 16 bars total
-static const float LO_VOLUME = ONE_BAR * 5;
-static const float HI_VOLUME = ONE_BAR * 10;
 
 
 @interface ViewController ()
@@ -169,26 +164,9 @@ static const float HI_VOLUME = ONE_BAR * 10;
 }
 
 
-- (void)setVolume:(float)value
-{
-    // TODO: any way also toggle vibration?
-    if ([self getVolume] != value) {
-        [[AVSystemController sharedAVSystemController] setVolumeTo:value forCategory:@"Ringtone"];
-    }
-}
-
-
-- (float)getVolume
-{
-    float volume = 0;
-    [[AVSystemController sharedAVSystemController] getVolume:&volume forCategory:@"Ringtone"];
-    return volume;
-}
-
-
 - (void)syncVolume
 {
-    if ([self getVolume] < 0.5) {
+    if (VolumeControl.volume < 0.5) {
         [self loVolume];
     } else {
         [self hiVolume];
@@ -198,14 +176,14 @@ static const float HI_VOLUME = ONE_BAR * 10;
 
 - (void)loVolume
 {
-    [self setVolume:LO_VOLUME];
+    VolumeControl.volume = LO_VOLUME;
     self.volumeState.on = NO;
 }
 
 
 - (void)hiVolume
 {
-    [self setVolume:HI_VOLUME];
+    VolumeControl.volume = HI_VOLUME;
     self.volumeState.on = YES;
 }
 

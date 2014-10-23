@@ -8,11 +8,16 @@ Volume automatically adjusted (if necessary) to nearest value on every launch an
 
 Application has immediately suspended after volume switch or tap anywhere in view. Volume also will be toggled if you lock device while application is active. That's why it's *Fast* - require as few user actions as possible.
 
+*Today widget* is available on iOS8.
+
 ![screenshot](screenshot.png)
 
 ### Changes
 
 <dl>
+    <dt>v1.1.0</dt>
+    <dd>Today widget on iOS8 for even faster volume toggle!</dd>
+
     <dt>v1.0.6</dt>
     <dd>Low volume is 5 bars now</dd>
 
