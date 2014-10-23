@@ -116,13 +116,14 @@ static const float HI_VOLUME = ONE_BAR * 10;
         }
         if (!rotated) {
             rotated = YES;
-            double angle[4] = {
+            double angle[5] = {
                 M_PI_4 * 2.5,
                 M_PI_4 * 3.5,
                 M_PI_4 * 4.5,
                 M_PI_4 * 7,
+                M_PI_4 * -0.3,
             };
-            for (int i = 1; i <= 4; i++) {
+            for (int i = 1; i <= 5; i++) {
                 UIImageView *arrowImageView = (UIImageView *)[self.view viewWithTag:i + 100];
                 arrowImageView.transform = CGAffineTransformMakeRotation((CGFloat)angle[i - 1]);
             }
