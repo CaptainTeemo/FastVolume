@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L3-a6-aLM">
-                                <rect key="frame" x="0.0" y="19" width="62" height="20.5"/>
+                                <rect key="frame" x="0.0" y="19.5" width="62" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -25,15 +25,19 @@
                                     <outletCollection property="gestureRecognizers" destination="J0Q-qF-NWa" appends="YES" id="Jxa-No-A9L"/>
                                 </connections>
                             </label>
-                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoVolume" translatesAutoresizingMaskIntoConstraints="NO" id="f9T-mO-DLR">
-                                <rect key="frame" x="272" y="9" width="32" height="31"/>
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f9T-mO-DLR" userLabel="Volume Image">
+                                <rect key="frame" x="272" y="9.5" width="32" height="31"/>
                                 <color key="tintColor" red="0.2901960784" green="0.6705882353" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Mxr-ud-fIa"/>
+                                    <constraint firstAttribute="width" constant="32" id="r7k-qM-kCb"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="J0Q-qF-NWa" appends="YES" id="Xvg-KM-BI2"/>
                                 </connections>
                             </imageView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low Volume" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARt-B0-D0Q">
-                                <rect key="frame" x="100" y="19" width="120" height="20.5"/>
+                                <rect key="frame" x="100" y="19.5" width="120" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="itI-aj-W60"/>
                                 </constraints>
@@ -47,12 +51,12 @@
                         </subviews>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="f9T-mO-DLR" secondAttribute="centerY" id="1nm-wz-mxq" userLabel="Image Y"/>
-                            <constraint firstAttribute="centerY" secondItem="ARt-B0-D0Q" secondAttribute="centerY" constant="-4" id="1yE-UY-oaj" userLabel="Volume Y"/>
                             <constraint firstAttribute="centerX" secondItem="ARt-B0-D0Q" secondAttribute="centerX" id="2H2-gm-Gl9" userLabel="Volume X"/>
                             <constraint firstItem="5L3-a6-aLM" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="Tok-AM-1Nb" userLabel="Label X"/>
                             <constraint firstAttribute="trailing" secondItem="f9T-mO-DLR" secondAttribute="trailing" constant="16" id="ewt-63-1lw" userLabel="Image Right"/>
+                            <constraint firstItem="ARt-B0-D0Q" firstAttribute="bottom" secondItem="f9T-mO-DLR" secondAttribute="bottom" id="g2C-Kt-KOO" userLabel="Volume Y"/>
                             <constraint firstItem="5L3-a6-aLM" firstAttribute="baseline" secondItem="ARt-B0-D0Q" secondAttribute="baseline" id="gfd-dQ-Im1" userLabel="Label Y"/>
+                            <constraint firstAttribute="centerY" secondItem="f9T-mO-DLR" secondAttribute="centerY" id="xcV-Jz-PbA" userLabel="Image Y"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -76,9 +80,6 @@
             <point key="canvasLocation" x="516" y="284"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="LoVolume" width="32" height="31"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

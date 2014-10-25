@@ -15,7 +15,7 @@ Application has immediately suspended after volume switch or tap anywhere in vie
 ### Changes
 
 <dl>
-    <dt>v1.1.0</dt>
+    <dt>v1.1.1</dt>
     <dd>Today widget on iOS8 for even faster volume toggle!</dd>
 
     <dt>v1.0.6</dt>

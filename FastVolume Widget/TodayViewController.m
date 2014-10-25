@@ -22,6 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.preferredContentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 50);
     [self updateViews];
 }
 
@@ -37,8 +38,20 @@
 }
 
 
+- (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets
+{
+    defaultMarginInsets.bottom = 0.0f;
+    return defaultMarginInsets;
+}
+
+
 - (BOOL)needUpdate
 {
+    static BOOL firstRun = YES;
+    if (firstRun) {
+        firstRun = NO;
+        return YES;
+    }
     return VolumeControl.volume < 0.5 != [self inLowVolumeState];
 }
 
@@ -75,17 +88,15 @@
 {
     self.volumeLabel.text = title;
     self.volumeImageView.image = [UIImage imageNamed:imageName];
-
-    CATransition *animation = [CATransition animation];
-    animation.duration = 0.4;
-    animation.type = kCATransitionFade;
-    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-    [self.view.layer addAnimation:animation forKey:nil];
 }
 
 
 - (IBAction)toggleVolume
 {
+    CATransition *animation = [CATransition animation];
+    animation.duration = 0.4;
+    animation.type = kCATransitionFade;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     if ([self inLowVolumeState]) {
         VolumeControl.volume = HI_VOLUME;
         [self setHiVolumeState];
@@ -93,6 +104,7 @@
         VolumeControl.volume = LO_VOLUME;
         [self setLoVolumeState];
     }
+    [self.view.layer addAnimation:animation forKey:nil];
 }
 
 @end
