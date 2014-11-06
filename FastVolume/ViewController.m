@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "VolumeControl.h"
+#import "PreferencesController.h"
 #import <notify.h>
 
 
@@ -28,9 +29,13 @@
     [super viewDidLoad];
     self.volumeState.transform = CGAffineTransformMakeScale(3, 3);
 
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                          action:@selector(suspend)];
+    UITapGestureRecognizer *tap
+        = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(suspend)];
     [self.view addGestureRecognizer:tap];
+
+    UILongPressGestureRecognizer *press
+        = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(openPreferences:)];
+    [self.view addGestureRecognizer:press];
 
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(applicationWillEnterForeground)
@@ -79,6 +84,14 @@
 #pragma ide diagnostic ignored "UnresolvedMessage"
     [[UIApplication sharedApplication] performSelector:@selector(suspend)];
 #pragma clang diagnostic pop
+}
+
+
+- (void)openPreferences:(UILongPressGestureRecognizer *)gesture
+{
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        [self performSegueWithIdentifier:@"ShowPreferences" sender:self];
+    }
 }
 
 
@@ -196,6 +209,28 @@
         [self loVolume];
     }
     [self suspend];
+}
+
+
+#pragma mark - Preferences
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"ShowPreferences"]) {
+        canShowHelp = NO;
+        UINavigationController *navigationController = segue.destinationViewController;
+        PreferencesController *preferences = (PreferencesController *)navigationController.topViewController;
+        preferences.lowVolumeBars = 5;
+        preferences.highVolumeBars = 10;
+    }
+}
+
+
+- (IBAction)savePreferences:(UIStoryboardSegue *)segue
+{
+    PreferencesController *preferences = segue.sourceViewController;
+    NSLog(@"SAVE %d %d", preferences.lowVolumeBars, preferences.highVolumeBars);
 }
 
 @end

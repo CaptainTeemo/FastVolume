@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A728271D0026953DE2067BC /* VolumeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A72857F4567D6108580A435 /* VolumeControl.m */; };
+		1A728CE3F5A6828E7B3157D3 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A728A425DD6BAF39982BC6D /* PreferencesController.m */; };
 		1A728F3A95B563378FD78BB5 /* VolumeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A72857F4567D6108580A435 /* VolumeControl.m */; };
 		C513226C19F836D7006395A7 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C513226B19F836D7006395A7 /* TodayViewController.m */; };
 		C513226E19F836D7006395A7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C513226D19F836D7006395A7 /* MainInterface.storyboard */; };
@@ -63,7 +64,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A728380FB2A3AA6A8A5AC33 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		1A72857F4567D6108580A435 /* VolumeControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumeControl.m; sourceTree = "<group>"; };
+		1A728A425DD6BAF39982BC6D /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		1A728AE07EA12FB16574FCE1 /* VolumeControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeControl.h; sourceTree = "<group>"; };
 		C513226419F836D7006395A7 /* FastVolume Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FastVolume Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C513226519F836D7006395A7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -197,6 +200,8 @@
 				C5B07A9018EDC89500E04490 /* Supporting Files */,
 				1A728AE07EA12FB16574FCE1 /* VolumeControl.h */,
 				1A72857F4567D6108580A435 /* VolumeControl.m */,
+				1A728380FB2A3AA6A8A5AC33 /* PreferencesController.h */,
+				1A728A425DD6BAF39982BC6D /* PreferencesController.m */,
 			);
 			path = FastVolume;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 				C5B07A9A18EDC89500E04490 /* AppDelegate.m in Sources */,
 				C5B07A9618EDC89500E04490 /* main.m in Sources */,
 				1A728F3A95B563378FD78BB5 /* VolumeControl.m in Sources */,
+				1A728CE3F5A6828E7B3157D3 /* PreferencesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
