@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Andrey Fedorov. All rights reserved.
 //
 
-@interface PreferencesController : UITableViewController
+@interface PreferencesController : UIViewController
 @property (nonatomic, assign) int lowVolumeBars;
 @property (nonatomic, assign) int highVolumeBars;
 @end

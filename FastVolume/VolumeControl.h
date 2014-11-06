@@ -9,14 +9,9 @@
 #import "AVSystemController.h"
 
 
-static const float ONE_BAR = 0.0625; // 16 bars total
-static const float LO_VOLUME = ONE_BAR * 5;
-static const float HI_VOLUME = ONE_BAR * 10;
-
-
 @interface VolumeControl : NSObject
 
-+ (void)setVolume:(float)value;
-+ (float)volume;
++ (void)setVolumeForBars:(int)bars;
++ (BOOL)isVolumeInLowRegionOf:(int)lowBars high:(int)highBars;
 
 @end

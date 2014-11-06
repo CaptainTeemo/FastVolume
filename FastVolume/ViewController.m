@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "VolumeControl.h"
+#import "Preferences.h"
 #import "PreferencesController.h"
 #import <notify.h>
 
@@ -21,6 +22,7 @@
 {
     int notifyToken;
     BOOL canShowHelp;
+    Preferences *preferences;
 }
 
 
@@ -28,6 +30,8 @@
 {
     [super viewDidLoad];
     self.volumeState.transform = CGAffineTransformMakeScale(3, 3);
+
+    preferences = [Preferences new];
 
     UITapGestureRecognizer *tap
         = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(suspend)];
@@ -179,7 +183,7 @@
 
 - (void)syncVolume
 {
-    if (VolumeControl.volume < 0.5) {
+    if ([VolumeControl isVolumeInLowRegionOf:preferences.lowVolumeBars high:preferences.highVolumeBars]) {
         [self loVolume];
     } else {
         [self hiVolume];
@@ -189,14 +193,14 @@
 
 - (void)loVolume
 {
-    VolumeControl.volume = LO_VOLUME;
+    [VolumeControl setVolumeForBars:preferences.lowVolumeBars];
     self.volumeState.on = NO;
 }
 
 
 - (void)hiVolume
 {
-    VolumeControl.volume = HI_VOLUME;
+    [VolumeControl setVolumeForBars:preferences.highVolumeBars];
     self.volumeState.on = YES;
 }
 
@@ -219,18 +223,17 @@
 {
     if ([segue.identifier isEqualToString:@"ShowPreferences"]) {
         canShowHelp = NO;
-        UINavigationController *navigationController = segue.destinationViewController;
-        PreferencesController *preferences = (PreferencesController *)navigationController.topViewController;
-        preferences.lowVolumeBars = 5;
-        preferences.highVolumeBars = 10;
+        PreferencesController *preferencesController = segue.destinationViewController;
+        preferencesController.lowVolumeBars = preferences.lowVolumeBars;
+        preferencesController.highVolumeBars = preferences.highVolumeBars;
     }
 }
 
 
 - (IBAction)savePreferences:(UIStoryboardSegue *)segue
 {
-    PreferencesController *preferences = segue.sourceViewController;
-    NSLog(@"SAVE %d %d", preferences.lowVolumeBars, preferences.highVolumeBars);
+    PreferencesController *preferencesController = segue.sourceViewController;
+    [preferences setVolumeLimitsLow:preferencesController.lowVolumeBars high:preferencesController.highVolumeBars];
 }
 
 @end

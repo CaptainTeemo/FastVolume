@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1A728271D0026953DE2067BC /* VolumeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A72857F4567D6108580A435 /* VolumeControl.m */; };
+		1A72851DA7B54C6687C4B4A4 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A728CB44F0B56C435D1FB82 /* Preferences.m */; };
+		1A7288CB64709219CDF579F8 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A728CB44F0B56C435D1FB82 /* Preferences.m */; };
 		1A728CE3F5A6828E7B3157D3 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A728A425DD6BAF39982BC6D /* PreferencesController.m */; };
 		1A728F3A95B563378FD78BB5 /* VolumeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A72857F4567D6108580A435 /* VolumeControl.m */; };
+		8099EE312F1942148014430B /* libPods-FastVolume.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB43E655E80411984908C93 /* libPods-FastVolume.a */; };
 		C513226C19F836D7006395A7 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C513226B19F836D7006395A7 /* TodayViewController.m */; };
 		C513226E19F836D7006395A7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C513226D19F836D7006395A7 /* MainInterface.storyboard */; };
 		C513227119F836D7006395A7 /* FastVolume Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C513226419F836D7006395A7 /* FastVolume Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -68,6 +71,10 @@
 		1A72857F4567D6108580A435 /* VolumeControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumeControl.m; sourceTree = "<group>"; };
 		1A728A425DD6BAF39982BC6D /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		1A728AE07EA12FB16574FCE1 /* VolumeControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeControl.h; sourceTree = "<group>"; };
+		1A728CB44F0B56C435D1FB82 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		1A728D55EF6EC93C9CC5CC7F /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		3D02FF0AC83BC4F448CA4270 /* Pods-FastVolume.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastVolume.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastVolume/Pods-FastVolume.debug.xcconfig"; sourceTree = "<group>"; };
+		BDB43E655E80411984908C93 /* libPods-FastVolume.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FastVolume.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C513226419F836D7006395A7 /* FastVolume Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FastVolume Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C513226519F836D7006395A7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		C513226919F836D7006395A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +104,9 @@
 		C5B07ABE18EDCC7B00E04490 /* Celestial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Celestial.framework; path = System/Library/PrivateFrameworks/Celestial.framework; sourceTree = SDKROOT; };
 		C5B07AC018EDCD7200E04490 /* AVSystemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSystemController.h; sourceTree = "<group>"; };
 		C5C3E36519FA92780072381E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C5C4B30D1A14B5460092805C /* FastVolume.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FastVolume.entitlements; sourceTree = "<group>"; };
+		C5C4B30E1A14B6860092805C /* FastVolume Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "FastVolume Widget.entitlements"; sourceTree = "<group>"; };
+		D3F0775550258D7B516175A8 /* Pods-FastVolume.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastVolume.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastVolume/Pods-FastVolume.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +126,7 @@
 				C513229919F909CA006395A7 /* Celestial.framework in Frameworks */,
 				C5B07A8E18EDC89500E04490 /* UIKit.framework in Frameworks */,
 				C5B07A8A18EDC89500E04490 /* Foundation.framework in Frameworks */,
+				8099EE312F1942148014430B /* libPods-FastVolume.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,9 +143,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60843C1CF3B06875E34792D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D02FF0AC83BC4F448CA4270 /* Pods-FastVolume.debug.xcconfig */,
+				D3F0775550258D7B516175A8 /* Pods-FastVolume.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C513226719F836D7006395A7 /* FastVolume Widget */ = {
 			isa = PBXGroup;
 			children = (
+				C5C4B30E1A14B6860092805C /* FastVolume Widget.entitlements */,
 				C513226A19F836D7006395A7 /* TodayViewController.h */,
 				C513226B19F836D7006395A7 /* TodayViewController.m */,
 				C513226D19F836D7006395A7 /* MainInterface.storyboard */,
@@ -160,6 +181,7 @@
 				C513226719F836D7006395A7 /* FastVolume Widget */,
 				C5B07A8818EDC89500E04490 /* Frameworks */,
 				C5B07A8718EDC89500E04490 /* Products */,
+				60843C1CF3B06875E34792D5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +205,7 @@
 				C5B07A8D18EDC89500E04490 /* UIKit.framework */,
 				C5B07AA818EDC89500E04490 /* XCTest.framework */,
 				C513226519F836D7006395A7 /* NotificationCenter.framework */,
+				BDB43E655E80411984908C93 /* libPods-FastVolume.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,6 +213,7 @@
 		C5B07A8F18EDC89500E04490 /* FastVolume */ = {
 			isa = PBXGroup;
 			children = (
+				C5C4B30D1A14B5460092805C /* FastVolume.entitlements */,
 				C5B07AC318EDE67500E04490 /* PrivateAPI */,
 				C5B07A9818EDC89500E04490 /* AppDelegate.h */,
 				C5B07A9918EDC89500E04490 /* AppDelegate.m */,
@@ -202,6 +226,8 @@
 				1A72857F4567D6108580A435 /* VolumeControl.m */,
 				1A728380FB2A3AA6A8A5AC33 /* PreferencesController.h */,
 				1A728A425DD6BAF39982BC6D /* PreferencesController.m */,
+				1A728D55EF6EC93C9CC5CC7F /* Preferences.h */,
+				1A728CB44F0B56C435D1FB82 /* Preferences.m */,
 			);
 			path = FastVolume;
 			sourceTree = "<group>";
@@ -267,10 +293,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5B07AB818EDC89500E04490 /* Build configuration list for PBXNativeTarget "FastVolume" */;
 			buildPhases = (
+				9D5EFEFD5CC74039AF568648 /* Check Pods Manifest.lock */,
 				C5B07A8218EDC89500E04490 /* Sources */,
 				C5B07A8318EDC89500E04490 /* Frameworks */,
 				C5B07A8418EDC89500E04490 /* Resources */,
 				C513227519F836D7006395A7 /* Embed App Extensions */,
+				02DBE76E2C1E4B028FD7FCDD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -311,6 +339,20 @@
 				TargetAttributes = {
 					C513226319F836D7006395A7 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 564U74X793;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					C5B07A8518EDC89500E04490 = {
+						DevelopmentTeam = 564U74X793;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					C5B07AA618EDC89500E04490 = {
 						TestTargetID = C5B07A8518EDC89500E04490;
@@ -367,6 +409,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02DBE76E2C1E4B028FD7FCDD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastVolume/Pods-FastVolume-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D5EFEFD5CC74039AF568648 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C513226019F836D7006395A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -374,6 +449,7 @@
 			files = (
 				C513226C19F836D7006395A7 /* TodayViewController.m in Sources */,
 				1A728271D0026953DE2067BC /* VolumeControl.m in Sources */,
+				1A72851DA7B54C6687C4B4A4 /* Preferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +462,7 @@
 				C5B07A9618EDC89500E04490 /* main.m in Sources */,
 				1A728F3A95B563378FD78BB5 /* VolumeControl.m in Sources */,
 				1A728CE3F5A6828E7B3157D3 /* PreferencesController.m in Sources */,
+				1A7288CB64709219CDF579F8 /* Preferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +521,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = "FastVolume Widget/FastVolume Widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -458,6 +538,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -466,6 +547,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = "FastVolume Widget/FastVolume Widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -476,6 +560,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -552,9 +637,13 @@
 		};
 		C5B07AB918EDC89500E04490 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D02FF0AC83BC4F448CA4270 /* Pods-FastVolume.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = FastVolume/FastVolume.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
@@ -564,15 +653,20 @@
 				GCC_PREFIX_HEADER = "FastVolume/FastVolume-Prefix.pch";
 				INFOPLIST_FILE = "FastVolume/FastVolume-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		C5B07ABA18EDC89500E04490 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3F0775550258D7B516175A8 /* Pods-FastVolume.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = FastVolume/FastVolume.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
@@ -582,6 +676,7 @@
 				GCC_PREFIX_HEADER = "FastVolume/FastVolume-Prefix.pch";
 				INFOPLIST_FILE = "FastVolume/FastVolume-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -15,6 +15,9 @@ Application has immediately suspended after volume switch or tap anywhere in vie
 ### Changes
 
 <dl>
+    <dt>v1.2.0</dt>
+    <dd>Preferences are available by long press.</dd>
+
     <dt>v1.1.1</dt>
     <dd>Today widget on iOS8 for even faster volume toggle!</dd>
 
