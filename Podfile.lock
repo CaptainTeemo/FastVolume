@@ -1,0 +1,10 @@
+PODS:
+  - NMRangeSlider (1.2.1)
+
+DEPENDENCIES:
+  - NMRangeSlider (~> 1.2.1)
+
+SPEC CHECKSUMS:
+  NMRangeSlider: af83627c6da11b39a6147c223f6674b3c57b5b44
+
+COCOAPODS: 0.35.0.rc2

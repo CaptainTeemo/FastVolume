@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "VolumeControl.h"
+#import "Preferences.h"
+#import "PreferencesController.h"
 #import <notify.h>
 
 
@@ -20,6 +22,7 @@
 {
     int notifyToken;
     BOOL canShowHelp;
+    Preferences *preferences;
 }
 
 
@@ -28,9 +31,15 @@
     [super viewDidLoad];
     self.volumeState.transform = CGAffineTransformMakeScale(3, 3);
 
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                          action:@selector(suspend)];
+    preferences = [Preferences new];
+
+    UITapGestureRecognizer *tap
+        = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(suspend)];
     [self.view addGestureRecognizer:tap];
+
+    UILongPressGestureRecognizer *press
+        = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(openPreferences:)];
+    [self.view addGestureRecognizer:press];
 
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(applicationWillEnterForeground)
@@ -79,6 +88,14 @@
 #pragma ide diagnostic ignored "UnresolvedMessage"
     [[UIApplication sharedApplication] performSelector:@selector(suspend)];
 #pragma clang diagnostic pop
+}
+
+
+- (void)openPreferences:(UILongPressGestureRecognizer *)gesture
+{
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        [self performSegueWithIdentifier:@"ShowPreferences" sender:self];
+    }
 }
 
 
@@ -166,7 +183,7 @@
 
 - (void)syncVolume
 {
-    if (VolumeControl.volume < 0.5) {
+    if ([VolumeControl isVolumeInLowRegionOf:preferences.lowVolumeBars high:preferences.highVolumeBars]) {
         [self loVolume];
     } else {
         [self hiVolume];
@@ -176,14 +193,14 @@
 
 - (void)loVolume
 {
-    VolumeControl.volume = LO_VOLUME;
+    [VolumeControl setVolumeForBars:preferences.lowVolumeBars];
     self.volumeState.on = NO;
 }
 
 
 - (void)hiVolume
 {
-    VolumeControl.volume = HI_VOLUME;
+    [VolumeControl setVolumeForBars:preferences.highVolumeBars];
     self.volumeState.on = YES;
 }
 
@@ -196,6 +213,27 @@
         [self loVolume];
     }
     [self suspend];
+}
+
+
+#pragma mark - Preferences
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"ShowPreferences"]) {
+        canShowHelp = NO;
+        PreferencesController *preferencesController = segue.destinationViewController;
+        preferencesController.lowVolumeBars = preferences.lowVolumeBars;
+        preferencesController.highVolumeBars = preferences.highVolumeBars;
+    }
+}
+
+
+- (IBAction)savePreferences:(UIStoryboardSegue *)segue
+{
+    PreferencesController *preferencesController = segue.sourceViewController;
+    [preferences setVolumeLimitsLow:preferencesController.lowVolumeBars high:preferencesController.highVolumeBars];
 }
 
 @end

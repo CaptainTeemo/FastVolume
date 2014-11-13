@@ -8,6 +8,7 @@
 
 #import "TodayViewController.h"
 #import "VolumeControl.h"
+#import "Preferences.h"
 #import <NotificationCenter/NotificationCenter.h>
 
 
@@ -18,10 +19,15 @@
 
 
 @implementation TodayViewController
+{
+    Preferences *preferences;
+}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    preferences = [Preferences new];
     self.preferredContentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 50);
     [self updateViews];
 }
@@ -29,6 +35,7 @@
 
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler
 {
+    preferences = [Preferences new];
     if ([self needUpdate]) {
         [self updateViews];
         completionHandler(NCUpdateResultNewData);
@@ -52,7 +59,7 @@
         firstRun = NO;
         return YES;
     }
-    return VolumeControl.volume < 0.5 != [self inLowVolumeState];
+    return [VolumeControl isVolumeInLowRegionOf:preferences.lowVolumeBars high:preferences.highVolumeBars] != [self inLowVolumeState];
 }
 
 
@@ -70,7 +77,7 @@
 
 - (void)updateViews
 {
-    if (VolumeControl.volume < 0.5) {
+    if ([VolumeControl isVolumeInLowRegionOf:preferences.lowVolumeBars high:preferences.highVolumeBars]) {
         [self setLoVolumeState];
     } else {
         [self setHiVolumeState];
@@ -98,10 +105,10 @@
     animation.type = kCATransitionFade;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     if ([self inLowVolumeState]) {
-        VolumeControl.volume = HI_VOLUME;
+        [VolumeControl setVolumeForBars:preferences.highVolumeBars];
         [self setHiVolumeState];
     } else {
-        VolumeControl.volume = LO_VOLUME;
+        [VolumeControl setVolumeForBars:preferences.lowVolumeBars];
         [self setLoVolumeState];
     }
     [self.view.layer addAnimation:animation forKey:nil];
