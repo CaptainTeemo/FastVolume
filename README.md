@@ -2,7 +2,7 @@
 
 It's too difficult to hear ringer at street. But keeping loud volume all the time is also not possible.
 
-Application provides fast way (on non-jailbroken device) to switch between quiet and loud ringer volumes (hard-coded, 5 and 10 bars). Uses iOS Private API.
+Application provides fast way (on non-jailbroken device) to switch between quiet and loud ringer volumes (adjusted in application's preferences, 5 and 10 bars by default). Uses iOS Private API.
 
 Volume automatically adjusted (if necessary) to nearest value on every launch and resume from background.
 
