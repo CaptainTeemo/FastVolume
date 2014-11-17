@@ -218,7 +218,6 @@
 
 #pragma mark - Preferences
 
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"ShowPreferences"]) {
@@ -234,6 +233,7 @@
 {
     PreferencesController *preferencesController = segue.sourceViewController;
     [preferences setVolumeLimitsLow:preferencesController.lowVolumeBars high:preferencesController.highVolumeBars];
+    [self syncVolume];
 }
 
 @end
